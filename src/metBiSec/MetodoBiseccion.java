@@ -1,20 +1,20 @@
 
-package metBi;
+package metBiSec;
 
 public class MetodoBiseccion {
     
-    private Funcion funcion;
+    private FuncionBi funcion;
     double xR;
     int contador;
     
     public MetodoBiseccion(){}
     
     public MetodoBiseccion(String funcionBi) {
-        funcion = new Funcion(funcionBi);
+        funcion = new FuncionBi(funcionBi);
     }//cierra el constructor
     
     public void setFuncion(String funcionBi) {
-        funcion = new Funcion(funcionBi);
+        funcion = new FuncionBi(funcionBi);
     }//cierra el metodo
     
     public double metodoBiseccion(double a, double b, double ep) {

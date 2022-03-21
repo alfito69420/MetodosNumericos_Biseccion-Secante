@@ -1,5 +1,5 @@
 
-package metBi;
+package metBiSec;
 
 /* 
 ESTA CLASE FUE CREADA PARA HACER PRUEBAS 

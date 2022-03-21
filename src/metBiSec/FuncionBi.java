@@ -1,14 +1,14 @@
 
-package metBi;
+package metBiSec;
 
 import org.nfunk.jep.JEP;
 
-public class Funcion {
+public class FuncionBi {
     private String funcion = "";
     
-    public Funcion(String funcion) {
+    public FuncionBi(String funcion) {
         this.funcion = funcion;
-    }//cierra el constructor
+    }//cierra el constructor 
     
     public double evaluacion(double x) {
         JEP jep = new JEP();
