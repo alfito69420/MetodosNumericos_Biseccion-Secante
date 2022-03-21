@@ -4,15 +4,26 @@ import org.nfunk.jep.JEP;
 
 public class Funcion {
     
-    JEP jep;
-    private double a = 0.0, b = 0.0;
+    JEP jep; 
+    
+    private double x = 0.0;
+    
+    private double a = 0.0, b = 0.0,  Xr = 0.0;
     private double fnA= 0.0, fnB = 0.0, fnXr = 0.0;
+    
     private double resultado = 0.0;
-    private double Xr = 0.0;
-    private double errorPermitido = 0.01;   //  Lo ingresa el usuario
+
+    private double errorPermitido = 0.0;   //  Lo ingresa el usuario
     private double errorFn = 0.0;   //  Lo calculamos en el algoritmo
+    
     private String funcion = "";    //  Almacena la funcion
     private String errorFuncion = "";
+    
+    
+    
+    public double setErrorPermitido(double errorPermitido) {
+        return this.errorPermitido = errorPermitido;
+    }//cierra el metodo
     
     public void setFuncion(String funcion) {
         this.funcion = funcion;
@@ -40,7 +51,14 @@ public class Funcion {
         //  Se agregan las funciones y variables estandar
         this.jep.addStandardFunctions();
         this.jep.addStandardConstants();
+        
+        jep.addVariable("x", x);
+        jep.parseExpression(funcion);
+        
+        
+        
 
+        /*while((errorFn != errorPermitido) || ((fnA*fnXr) != 0)) {
         //  Se evaluan a y b en la funcion
         this.jep.addVariable("x", a);
         this.jep.parseExpression(this.funcion); //  se hace un parseo
@@ -66,5 +84,6 @@ public class Funcion {
         }
         
         this.errorFuncion = (this.jep.hasError())? "Ha sucedido un error":"No han habido errores";
+        }//cierra el bucle*/
     }//cierra el metodo
 }//cierra la clase

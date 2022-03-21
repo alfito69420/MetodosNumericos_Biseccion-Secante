@@ -165,12 +165,14 @@ public class formularioFuncion extends javax.swing.JFrame {
         String fn = tfFuncion.getText();
         double valA = Double.parseDouble(tfValorA.getText());
         double valB = Double.parseDouble(tfValorB.getText());
+        double valError = Double.parseDouble(tfError.getText());
         
         Funcion funcion = new Funcion();
         
         funcion.setFuncion(fn);
         funcion.setValorA(valA);
         funcion.setValorB(valB);
+        funcion.setErrorPermitido(valError);
         funcion.evaluarFucion();
         
         tfResultado.setText(funcion.getResultado() + "");
