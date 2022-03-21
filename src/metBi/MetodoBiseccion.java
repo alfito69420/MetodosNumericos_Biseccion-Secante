@@ -4,7 +4,7 @@ package metBi;
 public class MetodoBiseccion {
     
     private Funcion funcion;
-    double xr;
+    double x;
     int contador;
     
     public MetodoBiseccion(){}
@@ -18,7 +18,7 @@ public class MetodoBiseccion {
     }
     
     public double metodoBiseccion(double a, double b, double ep) {
-        this.xr = Double.NaN;
+        this.x = Double.NaN;
         this.contador = 0;
         
         double fnA = this.funcion.evaluacion(a);
@@ -28,22 +28,22 @@ public class MetodoBiseccion {
             
             if(fnA * fnB < 0) {
                 do {                    
-                    this.xr = (a+b)/2;
+                    this.x = (a+b)/2;
                     this.contador++;
                     
                     fnA = this.funcion.evaluacion(a);
                     fnB = this.funcion.evaluacion(b);
                     
-                    if (fnA * this.funcion.evaluacion(xr) < 0) {
-                        b = this.xr;
+                    if (fnA * this.funcion.evaluacion(x) < 0) {
+                        b = this.x;
                     } else {
-                        a = this.xr;
+                        a = this.x;
                     }
-                } while (Math.abs(this.funcion.evaluacion(xr)) > ep);
+                } while (Math.abs(this.funcion.evaluacion(x)) > ep);
             }
-            if(!Double.isNaN(this.xr)) {
-                return this.xr;
-            }
+            if(!Double.isNaN(this.x)) {
+                return this.x;
+            }//
         }
         return Double.NaN;
     }//cierra el metodo

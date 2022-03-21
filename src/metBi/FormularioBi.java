@@ -58,6 +58,7 @@ public class FormularioBi extends javax.swing.JFrame {
 
         jLabel6.setText("Raíz: ");
 
+        btnCalcular.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         btnCalcular.setText("CALCULAR");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +68,11 @@ public class FormularioBi extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jButton1.setText("CALCULAR DE NUEVO");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -124,7 +130,7 @@ public class FormularioBi extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(textError, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular)
                     .addComponent(jButton1))
@@ -162,6 +168,16 @@ public class FormularioBi extends javax.swing.JFrame {
         double raiz = metodo.metodoBiseccion(valA, valB, valError);
         textRaiz.setText(raiz + "");
     }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            
+                textFuncion.setText("");
+                textA.setText("");
+                textB.setText("");
+                textError.setText("");
+                textRaiz.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

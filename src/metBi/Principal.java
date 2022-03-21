@@ -1,10 +1,17 @@
 
 package metBi;
 
+/* 
+ESTA CLASE FUE CREADA PARA HACER PRUEBAS 
+DE LOS METODOS ANTES DE HABER IMPLEMENTADO
+LA INTERFAZ GRAFICA, LA GRAFICA DE LA FUNCION,
+LA TABLA, EL REDONDEO Y MUCHOS MAS DETALLES.
+*/
+
+
 public class Principal {
     
     public static void main(String[] args) {
-        
         MetodoBiseccion ob = new MetodoBiseccion();
         
         ob.setFuncion("x^2 - 5");
