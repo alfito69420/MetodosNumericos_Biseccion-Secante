@@ -34,11 +34,12 @@ public class FormularioSec extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         Regresar = new javax.swing.JButton();
         jejeje = new javax.swing.JPanel();
-        contadoR = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         btnGra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setForeground(new java.awt.Color(102, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setText("CALCULADORA - MÉTODO SECANTE");
@@ -51,6 +52,7 @@ public class FormularioSec extends javax.swing.JFrame {
 
         jLabel5.setText("Tolerancia de error:");
 
+        btnCal.setBackground(new java.awt.Color(0, 204, 0));
         btnCal.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         btnCal.setText("CALCULAR");
         btnCal.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +63,7 @@ public class FormularioSec extends javax.swing.JFrame {
 
         jLabel6.setText("Raíz: ");
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jButton1.setText("LIMPIAR CAMPOS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -90,14 +93,7 @@ public class FormularioSec extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        contadoR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contadoRActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setText("No. iteraciones permitidas:");
-
+        btnGra.setBackground(new java.awt.Color(255, 0, 0));
         btnGra.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         btnGra.setText("GRAFICAR");
         btnGra.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +112,7 @@ public class FormularioSec extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel1)
-                            .addGap(84, 84, 84))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE))
                         .addComponent(Regresar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -127,22 +123,21 @@ public class FormularioSec extends javax.swing.JFrame {
                                 .addComponent(textRaizzz, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(btnCal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel7))
+                                    .addComponent(jLabel2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(contadoR, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(textXi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                                     .addComponent(textErrorpem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                                     .addComponent(textFun, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                                     .addComponent(textXi1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGra, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnGra, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jejeje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
@@ -171,21 +166,17 @@ public class FormularioSec extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(textErrorpem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(contadoR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textRaizzz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(9, 9, 9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Regresar)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jejeje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,9 +191,7 @@ public class FormularioSec extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -235,13 +224,14 @@ public class FormularioSec extends javax.swing.JFrame {
         double valXI1 = Double.parseDouble(textXi1.getText());
         double valXI = Double.parseDouble(textXi.getText());
         double valError = Double.parseDouble(textErrorpem.getText());
-        int contador = Integer.parseInt(contadoR.getText());
+        //int contador = Integer.parseInt(contadoR.getText());
+        int contador = 100;
         
         FuncionSec ob = new FuncionSec(funcion);
         MetodoSecante ms = new MetodoSecante();
         
-        double r=ms.metodoSecante(ob, valXI1, valXI, contador, valError);
-        textRaizzz.setText(r + "");
+        double raiz=ms.metodoSecante(ob, valXI1, valXI, contador, valError);
+        textRaizzz.setText(raiz + "");
         
     }//GEN-LAST:event_btnCalActionPerformed
 
@@ -255,14 +245,10 @@ public class FormularioSec extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        JFramePrincipal abrir = new JFramePrincipal();
+        InstruccionesSec abrir = new InstruccionesSec();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_RegresarActionPerformed
-
-    private void contadoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contadoRActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contadoRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,7 +289,6 @@ public class FormularioSec extends javax.swing.JFrame {
     private javax.swing.JButton Regresar;
     private javax.swing.JButton btnCal;
     private javax.swing.JButton btnGra;
-    private javax.swing.JTextField contadoR;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -311,7 +296,6 @@ public class FormularioSec extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jejeje;
     private javax.swing.JTextField textErrorpem;

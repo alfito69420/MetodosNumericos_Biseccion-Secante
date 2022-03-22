@@ -1,6 +1,7 @@
 
 package metBiSec;
 
+import javax.swing.JOptionPane;
 import org.nfunk.jep.JEP;
 
 public class FuncionSec {
@@ -14,39 +15,19 @@ public class FuncionSec {
         jep.parseExpression(fun);
         
         if(jep.hasError()){
-            System.out.println(jep.getErrorInfo());
+            System.out.println("Error carnal, checale");
         }
-    }
+    }//cierra el metodo
     
-    public double eval(double x){
-        double r;
+    public double evaluacion(double x){
+        double fnX;
         jep.addVariable("x", x);
-        r = jep.getValue();
+        fnX = jep.getValue();
         
-        if(jep.hasError()){
-            System.out.println(jep.getErrorInfo());
-        }
-        return r;
-    }
-    
-    /*private String funcion = "";
-    
-    public FuncionSec(String funcion) {
-        this.funcion = funcion;
-    }//cierra el constructor 
-    
-    public double evaluacion(double x) {
-        
-        jep.addStandardConstants();
-        jep.addStandardFunctions();
-        
-        jep.addVariable("x", x);
-        jep.parseExpression(this.funcion);
-        
-        if(!jep.hasError()) {
-            return jep.getValue();
+        if(!jep.hasError()){
+            return fnX;
         } else {
             return Double.NaN;
         }
-    }//cierra el metodo*/
+    }//cierra el metodo
 }//cierra la clase

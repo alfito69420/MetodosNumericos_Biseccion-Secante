@@ -137,6 +137,8 @@ public class FormularioBi extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 153));
+
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setText("CALCULADORA - MÉTODO DE BISECCIÓN");
 
@@ -150,6 +152,7 @@ public class FormularioBi extends javax.swing.JFrame {
 
         jLabel6.setText("Raíz: ");
 
+        btnCalcular.setBackground(new java.awt.Color(0, 204, 0));
         btnCalcular.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         btnCalcular.setText("CALCULAR");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
@@ -158,6 +161,7 @@ public class FormularioBi extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jButton1.setText("LIMPIAR CAMPOS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +170,7 @@ public class FormularioBi extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jButton2.setText("GRAFICAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +274,7 @@ public class FormularioBi extends javax.swing.JFrame {
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Regresar))
                     .addComponent(equisde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -366,7 +371,7 @@ public class FormularioBi extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        JFramePrincipal abrir = new JFramePrincipal();
+        InstruccionesBic abrir = new InstruccionesBic();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_RegresarActionPerformed
