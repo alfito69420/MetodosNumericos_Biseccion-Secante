@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/MetodoBiseccion.java</file>
             <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/FormularioBi.java</file>
-            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/FormularioSec.java</file>
-            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/InstruccionesBic.java</file>
-            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/InstruccionesSec.java</file>
+            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/MetodoSecante.java</file>
+            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/FuncionBi.java</file>
             <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/JFramePrincipal.java</file>
+            <file>file:/C:/Users/Eduado/Documents/NetBeansProjects/Funcion/src/metBiSec/FuncionSec.java</file>
         </group>
     </open-files>
 </project-private>
